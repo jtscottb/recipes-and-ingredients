@@ -22,6 +22,21 @@ nav div {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
-    height: 100%;
+    margin-right: 100px;
+    gap: 20px;
+}
+
+nav div p {
+    font-size: 0.99rem;
+    padding: 0px 10px;
+}
+
+nav div p span {
+    color: #ff0;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+nav div p span:hover {
+    text-decoration: underline;
 }
