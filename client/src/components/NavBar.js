@@ -22,14 +22,14 @@ function NavBar() {
         Home
     </NavLink>
     <NavLink
-        to="/quiz"
+        to="/recipes"
         exact
         style={linkStyles}
     >
         Recipes
     </NavLink>
     <NavLink
-        to="/addquestion"
+        to="/addrecipe"
         exact
         style={linkStyles}
         

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function QuestionForm() {
+function RecipeForm() {
   const [formData, setFormData] = useState({
     prompt: "",
     answer1: "",
@@ -51,10 +51,10 @@ function QuestionForm() {
   return (
     <section>
       <div className="questionform">
-      <h1>New Question</h1>
+      <h1>New Recipe</h1>
       <form onSubmit={handleSubmit}>
         <label>
-          Prompt:
+          Meal Title:
           <input
             type="text"
             name="prompt"
@@ -63,7 +63,7 @@ function QuestionForm() {
           />
         </label>
         <label>
-          Answer 1:
+          Ingredients:
           <input
             type="text"
             name="answer1"
@@ -98,24 +98,11 @@ function QuestionForm() {
             onChange={handleChange}
           />
         </label>
-        <label>
-          Correct Answer:
-          <select
-            name="correctIndex"
-            value={formData.correctIndex}
-            onChange={handleChange}
-          >
-            <option value="0">{formData.answer1}</option>
-            <option value="1">{formData.answer2}</option>
-            <option value="2">{formData.answer3}</option>
-            <option value="3">{formData.answer4}</option>
-          </select>
-        </label>
-        <button type="submit">Add Question</button>
+        <button type="submit">Add Recipe</button>
       </form>
       </div>
     </section>
   );
 }
 
-export default QuestionForm;
+export default RecipeForm;
