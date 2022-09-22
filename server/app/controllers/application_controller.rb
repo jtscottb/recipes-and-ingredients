@@ -8,7 +8,18 @@ class ApplicationController < Sinatra::Base
   
   get "/recipes" do
     recipes = Recipe.all.order(:id)
-    teams.to_json
+    recipes.to_json
+  end
+
+  get "/ingredients" do
+    ingredients = Ingredient.all.order(:id)
+    ingredients.to_json
+  end
+
+  #Add New Recipe from form
+  get "/recipes" do
+    recipe = Recipe.create(recipe_name: params[recipe_name])
+    recipe.to_json
   end
 
 end
