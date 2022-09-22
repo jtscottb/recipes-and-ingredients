@@ -5,5 +5,10 @@ class ApplicationController < Sinatra::Base
   get "/" do
     { message: "Good luck with your project!" }.to_json
   end
+  
+  get "/recipes" do
+    recipes = Recipe.all.order(:id)
+    teams.to_json
+  end
 
 end

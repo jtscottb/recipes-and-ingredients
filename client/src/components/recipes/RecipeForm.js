@@ -30,7 +30,7 @@ function RecipeForm() {
       ],
       "correctIndex": formData.correctIndex
     }
-    fetch("http://localhost:3000/questions", {
+    fetch("http://localhost:9292/recipes", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
