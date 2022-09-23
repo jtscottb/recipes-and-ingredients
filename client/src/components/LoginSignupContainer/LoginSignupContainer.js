@@ -3,27 +3,27 @@ import "./LoginSignupContainer.css"
 import Login from '../login/Login';
 import Signup from '../signup/Signup';
 
-const LoginSignupContainer = () => {
+function LoginSignupContainer() {
     const [login, setLogin] = useState(true);
-    // const [signup, setSignup] = useState(false)
-    const logininSignupContainerRef = useRef(null)
+    const loginSignupContainerRef = useRef(null)
     
     const handleClick = () => {
         setLogin(!login);
     }
 
-    logininSignupContainerRef.current.classList.toggle("active");
+    // loginSignupContainerRef.current.classList.toggle("active");
 
 return (
-    <div className="login-signup-container" ref={logininSignupContainerRef}>
+    <div className="login-signup-container" ref={loginSignupContainerRef}>
     <Login />
     <div className="side-div">
-    <button type="button" onClick={handleClick}> {login ? "Login" : "Signup"}</button>
+    <button type="button" onClick={handleClick}> {login ? "Login" : "Signup"} </button>
     </div>
     <Signup/>
-    
     </div>
 )
+
+
 }
 
 export default LoginSignupContainer

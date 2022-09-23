@@ -1,5 +1,6 @@
-import React from "react"
-import "./NavBar.css"
+import React from "react";
+import { NavLink } from "react-router-dom";
+import "./NavBar.css";
 
 const NavBar = () => {
     return (
@@ -10,6 +11,7 @@ const NavBar = () => {
                 <i className="fa-solid fa-user"></i>
             </div>
         </nav>
+        
     )
 }
 
