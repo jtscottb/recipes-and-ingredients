@@ -5,7 +5,7 @@ import Signup from '../signup/Signup';
 
 const LoginSignupContainer = () => {
     const [login, setLogin] = useState(true);
-    const [signup, setSignup] = useState(false)
+    // const [signup, setSignup] = useState(false)
     const logininSignupContainerRef = useRef(null)
     
     const handleClick = () => {

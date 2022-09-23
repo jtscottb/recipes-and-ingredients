@@ -10,7 +10,7 @@
 
 .login h1 {
     font-size: 4.5rem;
-    margin-bottom: 20px;
+    margin-top: 20px;
     color: #000;
     font-weight: bold;
     padding: 15px 0;
@@ -47,7 +47,13 @@
     border-radius: 5px;
     margin-top: 10px;
     font-size: 0.99rem;
-    font-weight: bold;
     color: #000;
+    background: #fff;
+    cursor: pointer;
     transition: 0.3s linear;
+}
+
+.login form button:hover {
+    background: #000;
+    color: #fff;
 }
