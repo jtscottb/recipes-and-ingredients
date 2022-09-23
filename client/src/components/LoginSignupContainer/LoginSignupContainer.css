@@ -1,0 +1,24 @@
+.login-signup-container {
+    display: grid;
+    grid-template-columns: 80% 20% 80%;
+    width: 60%;
+    height: 400px;
+    background-color: #f5f5f5;
+    padding: 0px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #000;
+    overflow: hidden;
+}
+
+.login-signup-container .side-div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: url("https://cdn.pixabay.com/photo/2016/10/21/14/50/plouzane-1758197_960_720.jpg");
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+}

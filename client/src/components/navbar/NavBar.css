@@ -40,3 +40,13 @@ nav div p span {
 nav div p span:hover {
     text-decoration: underline;
 }
+
+nav div i {
+    font-size: 0.99rem;
+    cursor: pointer;
+    border: 1px solid yellow;
+    background-color: #fff;
+    color: #fff;
+    padding: 10px 12px;
+    border-radius: 50%;
+}

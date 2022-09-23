@@ -7,7 +7,7 @@ const NavBar = () => {
             <a href="/">World's Best Cookbook</a>
             <div>
                 <p>Welcome, <span>Guest</span></p>
-                <i className="user"></i>
+                <i className="fa-solid fa-user"></i>
             </div>
         </nav>
     )
