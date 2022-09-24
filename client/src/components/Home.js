@@ -4,7 +4,10 @@ function Home() {
 
     return (
         <div className="description">
-        <p>Store all your favorite recipes here!</p>
+            <p>Store all your favorite recipes here!</p>
+            <div className="recipe-container">
+                
+            </div>
         </div>
     )
 }
