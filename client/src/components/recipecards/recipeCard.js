@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 
-function recipeCard({ recipe }) {
+function RecipeCard({ recipe }) {
     const [flip, setFlip] = useState(false)
 
 
@@ -20,4 +20,4 @@ function recipeCard({ recipe }) {
 
 
 
-export default recipeCard;
+export default RecipeCard;

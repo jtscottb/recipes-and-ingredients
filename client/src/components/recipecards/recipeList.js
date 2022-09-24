@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import recipeCard from "./recipeCard";
+import RecipeCard from "./recipeCard";
 
 
 function RecipeList() {
