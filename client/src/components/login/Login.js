@@ -11,8 +11,7 @@ const Login = () => {
             <form>
                 <input type={"email"} placeholder={"Email"} />
                 <input type={"password"} placeholder={"Password"} />
-                <button type={"submit"} onClick={() => navigate("/home")}>Login</button>
-                
+                <button type={"submit"} onClick={() => navigate("/recipes")}>Login</button>
             </form>
         </div>
     );

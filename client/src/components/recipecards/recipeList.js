@@ -6,7 +6,7 @@ function RecipeList() {
     const [recipes, setRecipes] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:9292/home")
+        fetch("http://localhost:9292/recipes")
             .then((response) => response.json())
             .then((recipes) => setRecipes(recipes))
     }, [])
@@ -15,7 +15,7 @@ function RecipeList() {
     return (
         <div className="card-grid">
             {recipes.map(recipe => {
-                return <recipeCard recipe={recipe} key={recipe.id} />
+                return <RecipeCard recipe={recipe} key={recipe.id} />
             })}
         </div>
     );
