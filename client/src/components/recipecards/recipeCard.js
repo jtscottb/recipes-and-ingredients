@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 
-function recipeCard({ recipeCard }) {
+function recipeCard({ recipe }) {
     const [flip, setFlip] = useState(false)
 
 
@@ -10,8 +10,8 @@ function recipeCard({ recipeCard }) {
         className = {`card ${flip ? 'flip' : ''}`}
         onClick={() => setFlip(!flip)}
         >
-            <div className="front"> {recipeCard.prompt} </div>
-            <div className="back"> {recipeCard.answer} </div>
+            <div className="front"> {recipe.prompt} </div>
+            <div className="back"> {recipe.answer} </div>
         </div>
 
     )
