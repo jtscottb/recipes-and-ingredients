@@ -1,5 +1,5 @@
 import React from "react";
-import RecipeList from "./recipecards/recipeList";
+import RecipeList from "./recipes/recipeList";
 
 function Home() {
 
