@@ -1,9 +1,5 @@
 class ApplicationController < Sinatra::Base
-  set :default_content_type, 'application/json' 
-
-  get "/" do
-
-  end
+  set :default_content_type, 'application/json'
 
   post "/recipes" do
     recipe = Recipe.create(
