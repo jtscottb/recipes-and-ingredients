@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 
-function Card({ recipeCard }) {
+function Recipe({ recipeCard }) {
     const [flip, setFlip] = useState(false)
 
 
@@ -11,7 +11,6 @@ function Card({ recipeCard }) {
         onClick={() => setFlip(!flip)}
         >
             <div className="front"> {recipeCard.name}</div>
-            <button className="remove" onClick={handleDeleteClick}>DELETE</button>
             <div className="back"> {recipeCard.picture} </div>
         </div>
 
@@ -21,4 +20,4 @@ function Card({ recipeCard }) {
 
 
 
-export default Card;
+export default Recipe;
