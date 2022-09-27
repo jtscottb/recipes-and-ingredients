@@ -22,8 +22,6 @@ return (
     <Signup/>
     </div>
 )
-
-
 }
 
 export default LoginSignupContainer
