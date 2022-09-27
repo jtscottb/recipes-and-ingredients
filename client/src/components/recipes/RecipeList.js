@@ -5,6 +5,10 @@ import "./Recipe.css"
 function RecipeList() {
     const [cards, setCards] = useState([]);
 
+    // function handleUpdatedRecipe(updatedRecipe) {
+    //     const updatedRecipes = cards.filter((recipe) => recipe.id !== cards.id)
+    // }
+
     useEffect(() => {
         fetch("http://localhost:9292/recipes")
         .then((response) => response.json())

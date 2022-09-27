@@ -2,7 +2,7 @@
     display: grid;
     align-items: center;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2.5rem;
+    gap: 7rem;
     margin-top: 3.8rem;
 }
 
@@ -63,7 +63,8 @@
     margin-top: .5rem;
     font-size: xx-large;
     font-weight: bolder;
-    color:white
+    color:white;
+    text-align: center;
 }
 
 .card .front,
@@ -77,5 +78,6 @@
     transform: rotateY(180deg);
     font-size: x-large;
     font-weight: bolder;
-    color: white
+    color: white;
+    margin-top: 12rem;
 }

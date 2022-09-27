@@ -1,8 +1,13 @@
 import React, { useState } from "react";
+import EditRecipe from "./EditRecipe";
 
 
 function Recipe({ recipeCard }) {
     const [flip, setFlip] = useState(false)
+
+    // function handleDeleteClick() {
+    //     fetch(`http://localhost:9292/recipes/${id}`)
+    // }
 
     return (
         <div 
@@ -14,8 +19,9 @@ function Recipe({ recipeCard }) {
                     <img src={recipeCard.picture}></img>
                 </div>
                 {recipeCard.name}
+                <EditRecipe />
             </div>
-            <div className="back"> {recipeCard.instructions} </div>
+            <div className="back"> Instructions: {recipeCard.instructions} </div>
         </div>
 
     )
