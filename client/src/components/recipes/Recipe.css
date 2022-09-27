@@ -2,7 +2,7 @@
     display: grid;
     align-items: center;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
+    gap: 2.5rem;
     margin-top: 3.8rem;
 }
 
@@ -14,14 +14,14 @@
     border-radius: 1rem;
     border-color: rgb(107, 255, 255);
     border: 10rem;
-    box-shadow: 0 0 10px 5px rgb(10, 4, 66);
-    background-image: url("https://t4.ftcdn.net/jpg/02/42/03/25/240_F_242032542_DMW2J5F2t1P2mTOF3xRpxpOUwqSueGuh.jpg");
+    box-shadow: 0 0 10px 5px rgb(0, 0, 0);
+    background-color: black;
     background-repeat: no-repeat;
     background-position: center;
     background-size:cover;
     transform-style: preserve-3d;
-    height: 350px;
-    width: 300px;
+    height: 450px;
+    width: 400px;
     transition: 150ms;
     cursor: pointer;
     transform: perspective(1000px) rotateY(var(--rotate-y, 0))
@@ -38,10 +38,32 @@
     --rotate-y: 180deg;
 }
 
+.card .front .container {
+    display: flex;
+    flex-flow: column;
+    object-fit: fill;
+    margin-bottom: 3.5rem;
+
+}
+
+.card .front .container img {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-top: auto;
+    float: left;
+    border-radius: 1rem;
+    display: block;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
 .card .front {
     margin-top: .5rem;
     font-size: xx-large;
     font-weight: bolder;
+    color:white
 }
 
 .card .front,
@@ -55,4 +77,5 @@
     transform: rotateY(180deg);
     font-size: x-large;
     font-weight: bolder;
+    color: white
 }

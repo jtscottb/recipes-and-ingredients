@@ -10,10 +10,12 @@ function Recipe({ recipeCard }) {
         onClick={() => setFlip(!flip)}
         >
             <div className="front"> 
-                <img src={recipeCard.picture}></img>
+                <div className="container">
+                    <img src={recipeCard.picture}></img>
+                </div>
                 {recipeCard.name}
             </div>
-            <div className="back"> {recipeCard.ingredients} </div>
+            <div className="back"> {recipeCard.instructions} </div>
         </div>
 
     )
