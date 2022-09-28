@@ -2,39 +2,28 @@ import React, { useState, useEffect } from "react";
 import Recipe from "./Recipe";
 import "./Recipe.css"
 
-function RecipeList() {
-    const [recipes, setRecipes] = useState([]);
-    
-    useEffect(() => {
-        fetch("http://localhost:9292/recipes")
-        .then((response) => response.json())
-        .then((recipes) => setRecipes(recipes))
-    }, []);
+function RecipeList({ recipes, onDeleteRecipe, onUpdateRecipe}) {
 
-    function handleDeleteRecipe(id) {
-        const updatedRecipes = recipes.filter((recipe) => recipe.id !== id);
-        setRecipes(updatedRecipes)
-    }
-
-    function handleUpdateRecipe(updatedRecipeObj) {
-        const updatedRecipes = recipes.map((recipe) => {
-            if (recipe.id === updatedRecipeObj.id) {
-                return updatedRecipeObj
-            } else {
-                return recipe
-            }
+    function handleDeleteClick(recipeCard) {
+        // debugger
+        fetch(`http://localhost:9292/recipes/${recipeCard.id}`, {
+            method: "DELETE",
         });
-        setRecipes(updatedRecipes)
+    
+        onDeleteRecipe(recipeCard.id)
     }
 
+    // Use recipeCard.id to delete the correct
     const mappedRecipes = recipes.map(recipeCard => {
         return (
+        <div className="individual-card" key={recipeCard.id}>
         <Recipe 
-        recipeCard={recipeCard} 
         key={recipeCard.id}
-        onRecipeDelete={handleDeleteRecipe}
-        onUpdateRecipe={handleUpdateRecipe}
+        recipeCard={recipeCard} 
+        onUpdateRecipe={onUpdateRecipe}
         />
+        <button className="remove" onClick={() => handleDeleteClick(recipeCard)}>DELETE</button>
+        </div>
         )
     })
 
