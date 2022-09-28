@@ -2,11 +2,21 @@ import React, { useState } from "react";
 import EditRecipe from "./EditRecipe";
 
 
-function Recipe({ recipeCard }) {
-    const [flip, setFlip] = useState(false)
+function Recipe({ recipeCard, onRecipeDelete, onUpdateRecipe }) {
+    const [flip, setFlip] = useState(false);
+    // const [isEditing, setIsEditing] = useState(false);
 
-    // function handleDeleteClick() {
-    //     fetch(`http://localhost:9292/recipes/${id}`)
+    function handleDeleteClick() {
+        fetch(`http://localhost:9292/recipes/${recipeCard.id}`, {
+            method: "DELETE",
+        });
+
+        onRecipeDelete(recipeCard.id)
+    }
+
+    // function handleUpdatedRecipe(updatedRecipe) {
+    //     setIsEditing(false);
+    //     onUpdateRecipe(updatedRecipe)
     // }
 
     return (
