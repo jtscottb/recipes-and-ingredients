@@ -26,7 +26,6 @@ function RecipeList({ recipes, onDeleteRecipe, onUpdateRecipe}) {
         </div>
         )
     })
-
     
 
     return (
