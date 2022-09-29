@@ -4,7 +4,8 @@ function NewRecipe ({ onAddRecipe }) {
     const [formData, setFormData] = useState({
         name: "",
         instructions: "",
-        picture: ""
+        picture: "",
+        ingredients: ""
     });
 
     function handleChange(event) {
@@ -38,7 +39,7 @@ function NewRecipe ({ onAddRecipe }) {
                 picture: ""
             })})
     }
-    
+
     return (
         <section>
             <div className="recipeform">
@@ -68,6 +69,15 @@ function NewRecipe ({ onAddRecipe }) {
                         type="text"
                         name="picture"
                         value={formData.picture}
+                        onChange={handleChange}
+                    />
+                </label>
+                <label>
+                    Ingredients:
+                    <input
+                        type="text"
+                        name="ingredients"
+                        value={formData.ingredients}
                         onChange={handleChange}
                     />
                 </label>
