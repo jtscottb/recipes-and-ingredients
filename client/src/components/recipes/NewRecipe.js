@@ -36,7 +36,8 @@ function NewRecipe ({ onAddRecipe }) {
                 setFormData({
                 name: "",
                 instructions: "",
-                picture: ""
+                picture: "",
+                ingredients: ""
             })})
     }
 
