@@ -1,8 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Recipe from "./Recipe";
+import { useNavigate } from "react-router-dom";
 import "./Recipe.css"
 
 function RecipeList({ recipes, onDeleteRecipe, onUpdateRecipe}) {
+
+    const navigate = useNavigate()
 
     function handleDeleteClick(recipeCard) {
         // debugger
@@ -23,10 +26,11 @@ function RecipeList({ recipes, onDeleteRecipe, onUpdateRecipe}) {
         onUpdateRecipe={onUpdateRecipe}
         />
         <button className="remove" onClick={() => handleDeleteClick(recipeCard)}>DELETE</button>
+        <button className="edit" onClick={() => navigate("/editrecipe")}>EDIT</button>
         </div>
         )
     })
-    
+
 
     return (
         <div className="card-grid">

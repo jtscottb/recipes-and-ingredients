@@ -1,8 +1,8 @@
 class Recipe < ActiveRecord::Base
     has_many :ingredients
 
-    def self.create_new(id, name, instructions)
-        self.create(id: id, name: name, instructions: instructions)
+    def self.create_new(name, instructions, picture)
+        self.create(name: name, instructions: instructions, picture: picture)
     end
 
     def delete(id)

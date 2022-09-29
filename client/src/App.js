@@ -3,8 +3,9 @@ import NavBar from "./components/navbar/NavBar";
 import LoginSignupContainer from "./components/LoginSignupContainer/LoginSignupContainer";
 import { Routes, Route } from 'react-router-dom';
 import Home from "./components/Home";
-import './App.css';
 import NewRecipe from "./components/recipes/NewRecipe";
+import EditRecipe from "./components/recipes/EditRecipe";
+import './App.css';
 
 const App = () => {
     const [recipes, setRecipes] = useState([]);
@@ -41,13 +42,15 @@ const App = () => {
     <div className="App">
       <NavBar />
       <Routes>
-      <Route path="/addrecipe" element={< NewRecipe />} />
+      <Route path="/editrecipe" element={<EditRecipe
+      onUpdateRecipe={handleUpdateRecipe} 
+      />} />
+      <Route path="/addrecipe" element={< NewRecipe onAddRecipe={handleAddRecipe} />} />
       <Route path="/recipes" element={<Home
-       recipes={recipes}
-       onDeleteRecipe={handleDeleteRecipe}
-       onUpdateRecipe={handleUpdateRecipe}
-       onAddRecipe={handleAddRecipe}
-       />} />
+      recipes={recipes}
+      onDeleteRecipe={handleDeleteRecipe}
+      onAddRecipe={handleAddRecipe}
+      />} />
       <Route path="/" element={<LoginSignupContainer />} />
       </Routes>
     </div>

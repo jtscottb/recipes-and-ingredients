@@ -1,17 +1,8 @@
 import React, { useState } from "react";
-import EditRecipe from "./EditRecipe";
 
 
-function Recipe({ recipeCard, onUpdateRecipe }) {
+function Recipe({ recipeCard }) {
     const [flip, setFlip] = useState(false);
-    const [isEditing, setIsEditing] = useState(false);
-
-    
-
-    function handleUpdatedRecipe(updatedRecipe) {
-        setIsEditing(false);
-        onUpdateRecipe(updatedRecipe)
-    }
 
     return (
         <div 
@@ -20,14 +11,12 @@ function Recipe({ recipeCard, onUpdateRecipe }) {
         >
             <div className="front"> 
                 <div className="container">
-                    <img src={recipeCard.picture}></img>
-                </div>
-                {recipeCard.name}
-                <EditRecipe />
-            </div>
-            <div className="back"> Instructions: {recipeCard.instructions} </div>
+                    <img src={recipeCard.picture} alt=""></img>
+                </div> {recipeCard.name} </div>
+            <div className="back"> 
+            Ingredients: {recipeCard.ingredients[0].name}
+            Instructions: {recipeCard.instructions} </div>
         </div>
-
     )
 }
 

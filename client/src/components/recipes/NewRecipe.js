@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function NewRecipe ({ onAddMessage }) {
+function NewRecipe ({ onAddRecipe }) {
     const [formData, setFormData] = useState({
         name: "",
         instructions: "",
@@ -31,17 +31,14 @@ function NewRecipe ({ onAddMessage }) {
         })
             .then((response) => response.json())
             .then((newRecipe) => {
-                onAddMessage(newRecipe)
+                onAddRecipe(newRecipe)
                 setFormData({
                 name: "",
                 instructions: "",
                 picture: ""
             })})
     }
-
-    console.log(formData.name)
-    console.log(formData.instructions)
-    console.log(formData.picture)
+    
     return (
         <section>
             <div className="recipeform">

@@ -1,5 +1,3 @@
-require "pry"
-
 class ApplicationController < Sinatra::Base
   set :default_content_type, 'application/json'
 
@@ -7,7 +5,7 @@ class ApplicationController < Sinatra::Base
     recipe = Recipe.create(
       name: params[:name],
       instructions: params[:instructions],
-      ingredient_id: params[:ingredient_id],
+      
       picture: params[:picture]
       )
       recipe.to_json
@@ -15,8 +13,7 @@ class ApplicationController < Sinatra::Base
 
   get "/recipes" do
     recipes = Recipe.all
-    # binding.pry
-    recipes.to_json
+    recipes.to_json(include: :ingredients)
   end
 
   patch "/recipes/:id" do
