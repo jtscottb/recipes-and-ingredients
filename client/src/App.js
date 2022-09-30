@@ -42,9 +42,7 @@ const App = () => {
     <div className="App">
       <NavBar />
       <Routes>
-      <Route path="/editrecipe" element={<EditRecipe
-      onUpdateRecipe={handleUpdateRecipe} 
-      />} />
+      <Route path="/editrecipe" element={<EditRecipe onUpdateRecipe={handleUpdateRecipe}/>} />
       <Route path="/addrecipe" element={< NewRecipe onAddRecipe={handleAddRecipe} />} />
       <Route path="/recipes" element={<Home
       recipes={recipes}

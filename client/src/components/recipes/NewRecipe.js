@@ -21,7 +21,8 @@ function NewRecipe ({ onAddRecipe }) {
         const newRecipeInfo = {
             "name": formData.name,
             "instructions": formData.instructions,
-            "picture": formData.picture
+            "picture": formData.picture,
+            "ingredients": formData.ingredients
         }
         fetch("http://localhost:9292/recipes", {
             method: "POST",

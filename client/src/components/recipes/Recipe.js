@@ -4,6 +4,7 @@ import React, { useState } from "react";
 function Recipe({ recipeCard }) {
     const [flip, setFlip] = useState(false);
 
+    console.log(recipeCard)
     return (
         <div 
         className = {`card ${flip ? 'flip' : ''}`}
