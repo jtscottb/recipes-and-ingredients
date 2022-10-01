@@ -22,5 +22,4 @@ ActiveRecord::Schema.define(version: 2022_09_30_013001) do
     t.text "instructions"
     t.string "picture"
   end
-  
 end

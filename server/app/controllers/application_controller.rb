@@ -1,20 +1,33 @@
 class ApplicationController < Sinatra::Base
   set :default_content_type, 'application/json'
 
-  post "/recipes" do
-    recipe = Recipe.create(
-      name: params[:name],
-      instructions: params[:instructions],
-      
-      picture: params[:picture]
-      )
-      recipe.to_json
-  end
-
   get "/recipes" do
     recipes = Recipe.all
     recipes.to_json(include: :ingredients)
   end
+
+
+  post "/recipes" do
+    recipe = Recipe.create(
+      name: params[:name],
+      instructions: params[:instructions],
+      picture: params[:picture]
+      )
+      recipe.ingredients.create(
+        name: params[:ingredients]
+      )
+      recipe.to_json(include: :ingredients)
+  end
+
+  # post "/ingredients" do
+  #     recipe = Recipe.find_by(id: params[:recipe_id])
+  #     ingredients = recipe.inredients.create(
+  #       name: params[:name]
+  #     )
+  # ingredients.to_json
+  # end
+
+  
 
   patch "/recipes/:id" do
     recipe = Recipe.find(params[:id])

@@ -5,7 +5,7 @@ pbj = Recipe.create(name: "Peanut Butter & Jelly Sandwich", instructions: "Take 
 
 avocado_toast = Recipe.create(name: "Avocado Toast", instructions: "Toast a slice of bread, spread avocado over the toast using a knife, and add salt and pepper to taste.", picture: "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimg1.cookinglight.timeinc.net%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Fmedium_2x%2Fpublic%2Fimage%2F2018%2F07%2Fmain%2F1807w-avocado-toast-recipe.jpg%3Fitok%3D_dDi7ZQQ&w=800&c=sc&poi=face&q=60")
 
-pbj.ingredients.create(name: "Bread, peanut butter & grape jelly", measurement: "Bread: 2 slices, Peanut butter: 2 tablespoons, Jelly: 1 tablespoon")
-avocado_toast.ingredients.create(name: "Bread, avocado, salt & pepper", measurement: "Bread: 1 slice, Avocado: 1")
+pbj.ingredients.create(name: "Bread, peanut butter & grape jelly")
+avocado_toast.ingredients.create(name: "Bread, avocado, salt & pepper")
 
 puts "✅ Done seeding!"

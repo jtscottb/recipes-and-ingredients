@@ -34,25 +34,25 @@ const App = () => {
 
     function handleAddRecipe(newRecipe) {
         setRecipes([...recipes, newRecipe]);
-      }
+    }
 
 
 
-  return (
+return (
     <div className="App">
-      <NavBar />
-      <Routes>
-      <Route path="/editrecipe" element={<EditRecipe onUpdateRecipe={handleUpdateRecipe}/>} />
-      <Route path="/addrecipe" element={< NewRecipe onAddRecipe={handleAddRecipe} />} />
-      <Route path="/recipes" element={<Home
-      recipes={recipes}
-      onDeleteRecipe={handleDeleteRecipe}
-      onAddRecipe={handleAddRecipe}
-      />} />
-      <Route path="/" element={<LoginSignupContainer />} />
-      </Routes>
+    <NavBar />
+    <Routes>
+    <Route path="/editrecipe" element={<EditRecipe onUpdateRecipe={handleUpdateRecipe}/>} />
+    <Route path="/addrecipe" element={< NewRecipe onAddRecipe={handleAddRecipe} />} />
+    <Route path="/recipes" element={<Home
+    recipes={recipes}
+    onDeleteRecipe={handleDeleteRecipe}
+    onAddRecipe={handleAddRecipe}
+    />} />
+    <Route path="/" element={<LoginSignupContainer />} />
+    </Routes>
     </div>
-  )
+)
 
 }
 

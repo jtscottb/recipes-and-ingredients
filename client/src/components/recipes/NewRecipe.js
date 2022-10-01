@@ -79,7 +79,7 @@ function NewRecipe ({ onAddRecipe }) {
                     <input
                         type="text"
                         name="ingredients"
-                        value={formData.ingredients}
+                        value={formData.ingredients.name}
                         onChange={handleChange}
                     />
                 </label>

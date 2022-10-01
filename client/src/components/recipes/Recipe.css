@@ -83,3 +83,15 @@
     color: white;
     margin-top: 12rem;
 }
+
+.card .back p1{
+    font-size: 25px;
+    display: block;
+    margin-bottom: 8rem;
+}
+
+.card .back p2{
+    font-size: 25px;
+    display: block;
+    margin-bottom: 12rem;
+}
