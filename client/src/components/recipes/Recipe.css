@@ -84,13 +84,13 @@
     margin-top: 12rem;
 }
 
-.card .back p1{
+.card .back h2{
     font-size: 25px;
     display: block;
-    margin-bottom: 8rem;
+    margin-bottom: 10rem;
 }
 
-.card .back p2{
+.card .back h3{
     font-size: 25px;
     display: block;
     margin-bottom: 12rem;

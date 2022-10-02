@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import EditRecipe from "./EditRecipe";
 
 
-function Recipe({ recipeCard }) {
+function Recipe({ recipeCard, onUpdateRecipe}) {
     const [flip, setFlip] = useState(false);
 
     const mapRecipeCard = recipeCard.ingredients.map((ingredient) => {
@@ -18,9 +19,9 @@ function Recipe({ recipeCard }) {
                     <img src={recipeCard.picture} alt=""></img>
                 </div> {recipeCard.name} </div>
             <div className="back"> 
-            <p1>Ingredients: {mapRecipeCard} </p1>
-            <p2>Instructions: {recipeCard.instructions} </p2>
-            </div> 
+            <h2>Ingredients: {mapRecipeCard} </h2>
+            <h3>Instructions: {recipeCard.instructions} </h3>
+            </div>
         </div>
     )
 }

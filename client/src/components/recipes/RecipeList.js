@@ -1,7 +1,7 @@
 import React from "react";
 import Recipe from "./Recipe";
-import { useNavigate } from "react-router-dom";
-import "./Recipe.css"
+import { useNavigate } from "react-router-dom"
+import "./Recipe.css";
 
 function RecipeList({ recipes, onDeleteRecipe}) {
 
@@ -19,7 +19,7 @@ function RecipeList({ recipes, onDeleteRecipe}) {
         <div className="individual-card" key={recipeCard.id}>
         <Recipe 
         key={recipeCard.id}
-        recipeCard={recipeCard} 
+        recipeCard={recipeCard}
         />
         <button className="remove" onClick={() => handleDeleteClick(recipeCard)}>DELETE</button>
         <button className="edit" onClick={() => navigate("/editrecipe")}>EDIT</button>

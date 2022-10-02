@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom"
 import RecipeList from "./recipes/RecipeList";
 import "./Home.css"
 
-function Home( { recipes, onDeleteRecipe, onUpdateRecipe, onAddRecipe } ) {
+function Home( { recipes, onDeleteRecipe, onAddRecipe } ) {
     const navigate = useNavigate()
 
 
@@ -15,7 +15,6 @@ function Home( { recipes, onDeleteRecipe, onUpdateRecipe, onAddRecipe } ) {
                 <RecipeList 
                 recipes={recipes} 
                 onDeleteRecipe={onDeleteRecipe}
-                onUpdateRecipe={onUpdateRecipe}
                 onAddRecipe={onAddRecipe}
                 />
             </div>
