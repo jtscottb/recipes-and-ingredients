@@ -2,10 +2,10 @@ import React, { useState } from "react";
 
 function EditRecipe ({ recipeCard, onUpdateRecipe }) {
     const [formData, setFormData] = useState({
-        name: "",
-        instructions: "",
-        picture: "",
-        ingredients: ""
+        name: recipeCard.name,
+        instructions: recipeCard.instructions,
+        picture: recipeCard.picture,
+        ingredients: recipeCard.ingredients
     });
 
     function handleChange(event) {

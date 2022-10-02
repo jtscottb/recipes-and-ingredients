@@ -19,16 +19,6 @@ class ApplicationController < Sinatra::Base
       recipe.to_json(include: :ingredients)
   end
 
-  # post "/ingredients" do
-  #     recipe = Recipe.find_by(id: params[:recipe_id])
-  #     ingredients = recipe.inredients.create(
-  #       name: params[:name]
-  #     )
-  # ingredients.to_json
-  # end
-
-  
-
   patch "/recipes/:id" do
     recipe = Recipe.find(params[:id])
     recipe.update(
