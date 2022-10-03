@@ -29,11 +29,9 @@ const App = () => {
                 return recipe
             }
         });
-        debugger
         setRecipes(updatedRecipes)
     }
 
-        debugger
 
     function handleAddRecipe(newRecipe) {
         setRecipes([...recipes, newRecipe]);

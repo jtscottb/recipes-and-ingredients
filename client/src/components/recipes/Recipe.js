@@ -5,7 +5,7 @@ function Recipe({ recipeCard }) {
     const [flip, setFlip] = useState(false);
 
     const mapRecipeCard = recipeCard.ingredients.map((ingredient) => {
-        return (ingredient.name) 
+        return (<li>{ingredient.name}</li>)
     })
 
     return (

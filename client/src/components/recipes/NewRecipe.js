@@ -5,7 +5,11 @@ function NewRecipe ({ onAddRecipe }) {
         name: "",
         instructions: "",
         picture: "",
-        ingredients: ""
+        ingredient1: "",
+        ingredient2: "",
+        ingredient3: "",
+        ingredient4: "",
+        ingredient5: "",
     });
 
     function handleChange(event) {
@@ -22,7 +26,11 @@ function NewRecipe ({ onAddRecipe }) {
             "name": formData.name,
             "instructions": formData.instructions,
             "picture": formData.picture,
-            "ingredients": formData.ingredients
+            "ingredient1": formData.ingredient1,
+            "ingredient2": formData.ingredient2,
+            "ingredient3": formData.ingredient3,
+            "ingredient4": formData.ingredient4,
+            "ingredient5": formData.ingredient5
         }
         fetch("http://localhost:9292/recipes", {
             method: "POST",
@@ -38,7 +46,11 @@ function NewRecipe ({ onAddRecipe }) {
                 name: "",
                 instructions: "",
                 picture: "",
-                ingredients: ""
+                ingredient1: "",
+                ingredient2: "",
+                ingredient3: "",
+                ingredient4: "",
+                ingredient5: "",
             })})
     }
 
@@ -75,11 +87,47 @@ function NewRecipe ({ onAddRecipe }) {
                     />
                 </label>
                 <label>
-                    Ingredients:
+                    Ingredient1:
                     <input
                         type="text"
-                        name="ingredients"
-                        value={formData.ingredients}
+                        name="ingredient1"
+                        value={formData.ingredient1}
+                        onChange={handleChange}
+                    />
+                </label>
+                <label>
+                    Ingredient2:
+                    <input
+                        type="text"
+                        name="ingredient2"
+                        value={formData.ingredient2}
+                        onChange={handleChange}
+                    />
+                </label>
+                <label>
+                    Ingredient3:
+                    <input
+                        type="text"
+                        name="ingredient3"
+                        value={formData.ingredient3}
+                        onChange={handleChange}
+                    />
+                </label>
+                <label>
+                    Ingredient4:
+                    <input
+                        type="text"
+                        name="ingredient4"
+                        value={formData.ingredient4}
+                        onChange={handleChange}
+                    />
+                </label>
+                <label>
+                    Ingredient5:
+                    <input
+                        type="text"
+                        name="ingredient5"
+                        value={formData.ingredient5}
                         onChange={handleChange}
                     />
                 </label>

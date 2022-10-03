@@ -6,7 +6,6 @@ class ApplicationController < Sinatra::Base
     recipes.to_json(include: :ingredients)
   end
 
-
   post "/recipes" do
     recipe = Recipe.create(
       name: params[:name],
@@ -14,7 +13,19 @@ class ApplicationController < Sinatra::Base
       picture: params[:picture]
       )
       recipe.ingredients.create(
-        name: params[:ingredients]
+        name: params[:ingredient1]
+      )
+      recipe.ingredients.create(
+        name: params[:ingredient2]
+      )
+      recipe.ingredients.create(
+        name: params[:ingredient3]
+      )
+      recipe.ingredients.create(
+        name: params[:ingredient4]
+      )
+      recipe.ingredients.create(
+        name: params[:ingredient5]
       )
       recipe.to_json(include: :ingredients)
   end
@@ -26,10 +37,22 @@ class ApplicationController < Sinatra::Base
       instructions: params[:instructions],
       picture: params[:picture]
     )
-    recipe.ingredients.update(
-      name: params[:ingredients]
+    recipe.ingredients.first.update(
+      name: params[:ingredient1]
     )
-    recipe.to_json
+    recipe.ingredients.second.update(
+      name: params[:ingredient2]
+    )
+    recipe.ingredients.third.update(
+      name: params[:ingredient3]
+    )
+    recipe.ingredients.fourth.update(
+      name: params[:ingredient4]
+    )
+    recipe.ingredients.fifth.update(
+      name: params[:ingredient5]
+    )
+    recipe.to_json(include: :ingredients)
   end
 
   delete "/recipes/:id" do

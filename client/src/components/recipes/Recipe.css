@@ -87,11 +87,15 @@
 .card .back h2{
     font-size: 25px;
     display: block;
-    margin-bottom: 10rem;
+    margin-bottom: 4rem;
 }
 
 .card .back h3{
     font-size: 25px;
     display: block;
     margin-bottom: 12rem;
+}
+
+.card .back span{
+    margin-right: 1rem;
 }
