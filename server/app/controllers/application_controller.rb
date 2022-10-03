@@ -26,6 +26,9 @@ class ApplicationController < Sinatra::Base
       instructions: params[:instructions],
       picture: params[:picture]
     )
+    recipe.ingredients.update(
+      name: params[:ingredients]
+    )
     recipe.to_json
   end
 

@@ -1,12 +1,16 @@
 import React, { useState } from "react";
+import { useParams } from "react-router-dom"
 
-function EditRecipe ({ recipeCard, onUpdateRecipe }) {
+function EditRecipe ({ onUpdateRecipe }) {
+    const params = useParams();
+
     const [formData, setFormData] = useState({
         name: "",
         instructions: "",
         picture: "",
         ingredients: ""
     });
+
 
     function handleChange(event) {
         setFormData({
@@ -18,17 +22,23 @@ function EditRecipe ({ recipeCard, onUpdateRecipe }) {
     function handleFormSubmit(e) {
         e.preventDefault();
     
-        fetch(`http://localhost:9292/recipes/${recipeCard.id}`, {
+        fetch(`http://localhost:9292/recipes/${params.id}`, {
         method: "PATCH",
         headers: {
             "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
         })
-        .then((r) => r.json())
-        .then((updatedRecipe) => onUpdateRecipe(updatedRecipe));
+        .then((response) => response.json())
+        .then((updatedRecipes) => {
+            onUpdateRecipe(updatedRecipes);
+            setFormData({
+            name: "",
+            instructions: "",
+            picture: "",
+            ingredients: ""
+            })})
     }
-
     
     return (
         <section>

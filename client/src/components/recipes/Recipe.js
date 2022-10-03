@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import EditRecipe from "./EditRecipe";
 
 
-function Recipe({ recipeCard, onUpdateRecipe}) {
+function Recipe({ recipeCard }) {
     const [flip, setFlip] = useState(false);
 
     const mapRecipeCard = recipeCard.ingredients.map((ingredient) => {

@@ -18,11 +18,10 @@ function RecipeList({ recipes, onDeleteRecipe}) {
         return (
         <div className="individual-card" key={recipeCard.id}>
         <Recipe 
-        key={recipeCard.id}
         recipeCard={recipeCard}
         />
         <button className="remove" onClick={() => handleDeleteClick(recipeCard)}>DELETE</button>
-        <button className="edit" onClick={() => navigate("/editrecipe")}>EDIT</button>
+        <button className="edit" onClick={() => navigate(`/recipes/${recipeCard.id}/edit`)}>EDIT</button>
         </div>
         )
     })

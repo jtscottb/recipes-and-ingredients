@@ -21,16 +21,19 @@ const App = () => {
         setRecipes(updatedRecipes)
     }
 
-    function handleUpdateRecipe(updatedRecipeObj) {
+    function handleUpdateRecipe(updatedRecipe) {
         const updatedRecipes = recipes.map((recipe) => {
-            if (recipe.id === updatedRecipeObj.id) {
-                return updatedRecipeObj
+            if (recipe.id === updatedRecipe.id) {
+                return updatedRecipe
             } else {
                 return recipe
             }
         });
+        debugger
         setRecipes(updatedRecipes)
     }
+
+        debugger
 
     function handleAddRecipe(newRecipe) {
         setRecipes([...recipes, newRecipe]);
@@ -42,8 +45,8 @@ return (
     <div className="App">
     <NavBar />
     <Routes>
-    <Route path="/editrecipe" element={<EditRecipe onUpdateRecipe={handleUpdateRecipe}/>} />
-    <Route path="/addrecipe" element={< NewRecipe onAddRecipe={handleAddRecipe} />} />
+    <Route path="/recipes/:id/edit" element={<EditRecipe recipes={recipes} onUpdateRecipe={handleUpdateRecipe}/>} />
+    <Route path="/recipes/add" element={< NewRecipe onAddRecipe={handleAddRecipe} />} />
     <Route path="/recipes" element={<Home
     recipes={recipes}
     onDeleteRecipe={handleDeleteRecipe}
